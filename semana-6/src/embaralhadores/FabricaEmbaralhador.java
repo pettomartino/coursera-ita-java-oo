@@ -11,8 +11,9 @@ public class FabricaEmbaralhador {
     private List<Embaralhador> embaralhadores;
 
     public FabricaEmbaralhador() {
-        embaralhadores = new ArrayList<Embaralhador>();
-        embaralhadores.add(new EmbaralhadorBasico());
+        embaralhadores = new ArrayList<>();
+//        embaralhadores.add(new EmbaralhadorBasico());
+        embaralhadores.add(new EmbaralhadorRandomico());
     }
 
     public FabricaEmbaralhador(List<Embaralhador> embaralhadores) {

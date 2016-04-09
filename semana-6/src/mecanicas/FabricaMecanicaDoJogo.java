@@ -1,7 +1,4 @@
 package mecanicas;
-
-import mecanicas.MecanicaDoJogo;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -16,6 +13,7 @@ public class FabricaMecanicaDoJogo {
         mecanicas = new ArrayList<MecanicaDoJogo>();
         mecanicas.add(new JogoFacil());
     }
+
 
     public FabricaMecanicaDoJogo(List<MecanicaDoJogo> mecanicas) {
         this.mecanicas = mecanicas;

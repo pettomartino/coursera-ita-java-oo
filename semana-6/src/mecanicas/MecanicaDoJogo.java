@@ -10,5 +10,5 @@ public interface MecanicaDoJogo {
     boolean verificaResposta(String resposta);
     int getVidas();
     String getMensagem();
-//    int contabilizaPontos();
+    String regras();
 }

@@ -10,13 +10,23 @@ public class JogoFacil implements MecanicaDoJogo {
 
     private Embaralhador embaralhador;
     private BancoDePalavras bancoDePalavras;
-    private int vidas = 2;
+    private int vidas = 5;
     private String palavraDaVez;
     private String mensagem;
 
     public JogoFacil() {
         this.bancoDePalavras = new BancoDePalavras(Palavras.Facil);
         this.embaralhador = new FabricaEmbaralhador().getEmbaralhador();
+    }
+
+
+    public String regras() {
+        StringBuilder regras = new StringBuilder();
+        regras.append("- o banco de palavras contém palavras simples.\n");
+        regras.append("- O embaralhador de palavras não muda ao longo do jogo\n");
+        regras.append("- Você possui 5 vidas");
+
+        return regras.toString();
     }
 
     public int getVidas() {

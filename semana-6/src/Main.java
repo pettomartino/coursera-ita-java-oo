@@ -1,6 +1,3 @@
-import embaralhadores.Embaralhador;
-import embaralhadores.FabricaEmbaralhador;
-import mecanicas.BancoDePalavras;
 import mecanicas.FabricaMecanicaDoJogo;
 import mecanicas.MecanicaDoJogo;
 
@@ -15,6 +12,9 @@ public class Main {
 
         System.out.println("- - - - > BEM VINDO AO JOGO DE EMBARALHAR PALAVRAS < - - - -");
         System.out.print("\n\n");
+        System.out.println("REGRAS:");
+        System.out.println(mecanicaDoJogo.regras());
+        System.out.print("\n\n");
 
         do {
 
@@ -25,10 +25,15 @@ public class Main {
             System.out.println(" (" + mecanicaDoJogo.getVidas() + " vidas)");
 
             String resposta = scanner.next();
-            mecanicaDoJogo.verificaResposta(resposta);
+            if(mecanicaDoJogo.verificaResposta(resposta)) {
+                System.out.println("Resposta certa!");
+            } else {
+                System.out.println("Você errou!");
+            }
 
         } while (mecanicaDoJogo.verificaSeOJogoContinua());
 
         System.out.println(mecanicaDoJogo.getMensagem());
     }
+
 }
