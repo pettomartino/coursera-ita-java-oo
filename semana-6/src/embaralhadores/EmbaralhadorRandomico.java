@@ -10,9 +10,11 @@ import java.util.Random;
  * Created by petto on 4/9/16.
  */
 public class EmbaralhadorRandomico implements Embaralhador {
-    @Override
-    public String embaralharPalavra(String palavra) {
 
+    private String palavaOriginal;
+
+    public String embaralharPalavra(String palavra) {
+        palavaOriginal = palavaOriginal;
         StringBuilder stringBuilder = new StringBuilder();
         ArrayList<String> letras = new ArrayList<>(Arrays.asList(palavra.split("")));
 
@@ -24,4 +26,5 @@ public class EmbaralhadorRandomico implements Embaralhador {
 
         return stringBuilder.reverse().toString();
     }
+
 }

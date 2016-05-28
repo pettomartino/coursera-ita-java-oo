@@ -3,9 +3,14 @@ import mecanicas.MecanicaDoJogo;
 
 import java.util.Scanner;
 
-public class Main {
+public class Principal {
 
     public static void main(String[] args) {
+
+        if (true)
+            System.out.print("teste");
+         else
+            System.out.print("bye");
 
         MecanicaDoJogo mecanicaDoJogo = new FabricaMecanicaDoJogo().getMecanicaDoJogo();
         Scanner scanner = new Scanner(System.in);

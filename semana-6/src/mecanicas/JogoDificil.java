@@ -11,7 +11,7 @@ public class JogoDificil implements MecanicaDoJogo {
     private Embaralhador embaralhador;
     private String palavraDaVez;
     private int vidas = 5;
-    private boolean errou = false;
+    private int erros = 0;
     private String mensagem;
     public JogoDificil() {
         bancoDePalavras = new BancoDePalavras(Palavras.Dificil);
@@ -32,7 +32,8 @@ public class JogoDificil implements MecanicaDoJogo {
 
     public String regras() {
         StringBuilder regras = new StringBuilder();
-        regras.append("- O Banco de Palavras escolhidos são de palavras raras.");
+        regras.append("REGRAS DA MECÂNICA DIFICIL\n");
+        regras.append("- O Banco de Palavras escolhido contém palavras raras.\n");
         regras.append("- Os embaralhadores podem mudar a cada nova palavra.\n");
         regras.append("- Você possui 5 vidas mas NÃO PODE cometer erros seguidos.");
 
@@ -59,7 +60,7 @@ public class JogoDificil implements MecanicaDoJogo {
     }
 
     private boolean possuiErrosSeguidos() {
-        return errou;
+        return erros > 1;
     }
 
     private Embaralhador fabricaEmbaralhador() {
@@ -81,6 +82,7 @@ public class JogoDificil implements MecanicaDoJogo {
 
         if (!respostaCerta) {
             retiraVida();
+            erros++;
         }
     }
 

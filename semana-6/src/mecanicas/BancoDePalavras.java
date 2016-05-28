@@ -22,7 +22,7 @@ public class BancoDePalavras {
     private List<String> words = new ArrayList<>();
 
     public BancoDePalavras(Palavras palavras) {
-        String arquivo = palavras == Palavras.Facil ? "palavras-faceis.txt" : "palavras-dificeis.txt";
+        String arquivo = palavras == Palavras.Facil ? "resources/palavras-faceis.txt" : "resources/palavras-dificeis.txt";
         try {
             carregaPalavrasDoArquivo(arquivo);
         } catch (Exception e) {

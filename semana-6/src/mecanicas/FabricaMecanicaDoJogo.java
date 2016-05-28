@@ -12,6 +12,7 @@ public class FabricaMecanicaDoJogo {
     public FabricaMecanicaDoJogo() {
         mecanicas = new ArrayList<MecanicaDoJogo>();
         mecanicas.add(new JogoFacil());
+        mecanicas.add(new JogoDificil());
     }
 
 
